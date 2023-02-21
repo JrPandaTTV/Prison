@@ -1,0 +1,22 @@
+name: Prison
+version: '${project.version}'
+main: com.jrpanda.Prison.Main
+api-version: 1.19
+commands:
+  workbench:
+    description: Opens up workbench for player.
+    usage: /<command>
+    aliases: [wb, craft, bench]
+  enderchest:
+    description: Access enderchest from anywhere.
+    usage: /<command> [args]
+    aliases: [echest, ec]
+  newpickaxe:
+    description: Adds a new pickaxe.
+    usage: /<command>
+    aliases: [newpick]
+permissions:
+  prison.enderchest:
+    default: op
+  prison.enderchest.others:
+    default: op
