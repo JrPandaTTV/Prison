@@ -15,5 +15,5 @@ public class Helper {
     }
 
     public static Inventory createInventory(int size, String name){ return Bukkit.createInventory(null, size, toColor(name)); }
-    
+
 }

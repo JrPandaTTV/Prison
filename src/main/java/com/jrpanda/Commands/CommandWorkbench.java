@@ -13,11 +13,10 @@ public class CommandWorkbench implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(command.getName().equalsIgnoreCase("workbench")){
             if(!(sender instanceof Player)){ return Helper.send(sender, "&4Not a player!"); }
-            if(sender instanceof Player){
-                Player player = (Player) sender;
-                if(!(player.hasPermission("prison.workbench"))){ return Helper.send(player, "&4No permissions"); }
-                player.openWorkbench(null, true);
-            }
+            Player player = (Player) sender;
+            if(!(player.hasPermission("prison.workbench"))){ return Helper.send(player, "&4No permissions"); }
+            player.openWorkbench(null, true);
+
         }
         return true;
     }

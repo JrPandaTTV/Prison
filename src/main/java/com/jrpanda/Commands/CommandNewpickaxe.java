@@ -1,6 +1,7 @@
 package com.jrpanda.Commands;
 
 import com.jrpanda.Prison.Helper;
+import com.jrpanda.Prison.Main;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -15,11 +16,9 @@ public class CommandNewpickaxe implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(command.getName().equalsIgnoreCase("newpickaxe")){
             if(!(sender instanceof Player)){ return Helper.send(sender, "&4Not a player!"); }
-            if(sender instanceof Player){
-                Player player = (Player) sender;
-                giveItem(player);
-                return Helper.send(player, "&eEnjoy your new pickaxe!");
-            }
+            Player player = (Player) sender;
+            giveItem(player);
+            return Helper.send(player, "&eEnjoy your new pickaxe!");
         }
         return true;
     }
@@ -32,4 +31,5 @@ public class CommandNewpickaxe implements CommandExecutor {
 
         player.getInventory().addItem(item);
     }
+
 }

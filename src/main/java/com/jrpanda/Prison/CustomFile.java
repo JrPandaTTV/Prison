@@ -7,12 +7,12 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.io.File;
 import java.io.IOException;
 
-public class CustomFiles {
+public class CustomFile {
 
     private File file;
     private FileConfiguration config;
 
-    public CustomFiles(String path){
+    public CustomFile(String path){
         file = new File(path);
         setup();
     }
