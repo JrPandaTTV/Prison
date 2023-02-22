@@ -15,8 +15,20 @@ commands:
     description: Adds a new pickaxe.
     usage: /<command>
     aliases: [newpick]
+  rename:
+    description: Renames item on hand.
+    usage: /<command> [args]
+    aliases: [rn]
+  fly:
+    description: Take flight!
+    usage: /<command> [on|off|args]
+    aliases: [flight]
 permissions:
   prison.enderchest:
     default: op
   prison.enderchest.others:
+    default: op
+  prison.fly:
+    default: op
+  prison.rename:
     default: op
