@@ -23,6 +23,18 @@ commands:
     description: Take flight!
     usage: /<command> [on|off|args]
     aliases: [flight]
+  setwarp:
+    description: Set warps!
+    usage: /<command> [args]
+    aliases: []
+  deletewarp:
+    description: Delete warps
+    usage: /<command> [args]
+    aliases: [delwarp]
+  warp:
+    description: Teleport to warps
+    usage: /<command> [args]
+    aliases: []
 permissions:
   prison.enderchest:
     default: op
@@ -30,5 +42,14 @@ permissions:
     default: op
   prison.fly:
     default: op
+  prison.fly.others:
+    default: op
   prison.rename:
     default: op
+  prison.setwarp:
+    default: op
+  prison.deletewarp:
+    default: op
+  prison.warp:
+    default: op
+

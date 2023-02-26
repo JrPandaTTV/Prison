@@ -1,6 +1,7 @@
 package com.jrpanda.Prison;
 
 import com.jrpanda.Commands.*;
+import com.jrpanda.Listeners.CommandHelp;
 import com.jrpanda.Listeners.PickaxeEvent;
 import com.jrpanda.Listeners.PlayerConnection;
 import com.jrpanda.Listeners.ServerListPing;
@@ -31,10 +32,13 @@ public final class Main extends JavaPlugin {
     }
 
     public void registerCommands(){
+        registerCommand("deletewarp", new CommandDeletewarp());
         registerCommand("enderchest", new CommandEnderchest());
         registerCommand("fly", new CommandFly());
         registerCommand("newpickaxe", new CommandNewpickaxe());
         registerCommand("rename", new CommandRename());
+        registerCommand("setwarp", new CommandSetwarp());
+        registerCommand("warp", new CommandWarp());
         registerCommand("workbench", new CommandWorkbench());
     }
 
@@ -42,6 +46,7 @@ public final class Main extends JavaPlugin {
         registerListener(new PlayerConnection(this));
         registerListener(new PickaxeEvent());
         registerListener(new ServerListPing());
+        registerListener(new CommandHelp());
     }
 
     private void registerCommand(String name, CommandExecutor cmd){
